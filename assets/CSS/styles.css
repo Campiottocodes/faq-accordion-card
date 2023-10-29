@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+:root {
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%); /*text*/
+  --soft-red: hsl(14, 88%, 65%); /*text*/
+  --soft-violet: hsl(273, 75%, 66%); /*gradient*/
+  --soft-blue: hsl(240, 73%, 65%); /*gradient*/
+  --very-dark-grayish-blue: hsl(237, 12%, 33%); /*text*/
+  --dark-grayish-blue: hsl(240, 6%, 50%); /*text*/
+  --light-grayish-blue: hsl(240, 5%, 91%); /*dividers*/
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(var(--soft-violet), var(--soft-blue));
+  padding: 10% 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main {
+  background: white;
+  height: 100%;
+  width: 100%;
+  border-radius: 3rem;
+  display: flex;
+}
+.info {
+  width: 50%;
+  padding: 7% 7% 7% 0%;
+}
+h1 {
+  font-size: 300%;
+  margin-bottom: 10%;
+  font-weight: 700;
+}
+h3 {
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+}
+h3:hover {
+  color: var(--soft-red);
+}
+p {
+  color: var(--dark-grayish-blue);
+  margin-top: 2%;
+}
+
+.dividers {
+  margin-bottom: 3%;
+  width: 100%;
+  position: relative;
+}
+.dividers::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: var(--light-grayish-blue);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.icon-arrow {
+  display: flex;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.left-img {
+  width: 50%;
+  position: relative;
+  padding: 0;
+  /* background-image: url(../images/bg-pattern-desktop.svg);
+  background-repeat: none;
+  background-size: cover;
+  position: absolute;
+  */
+}
+
+.bg-pattern {
+  width: 100%;
+  height: 100%;
+  background: url("../images/bg-pattern-desktop.svg");
+  background-size: 165%;
+  background-repeat: no-repeat;
+  background-position-x: 140%;
+  background-position-x: 140%;
+  background-position-y: 60%;
+  position: absolute;
+}
+.woman {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/illustration-woman-online-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 86%;
+  background-position-x: -99%;
+  background-position-y: 50%;
+  position: absolute;
+  z-index: 1;
+}
+.woman img {
+  display: none;
+}
+.img-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 28%;
+  top: 92%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.bold {
+  font-weight: bold;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.show {
+  display: flex !important;
+}
+.answer.collapse {
+  display: none;
+}
+
+.answer.show {
+  display: block;
+}
+
+@media screen and (width: 1400px) {
+  .bg-pattern {
+    background-size: 200%;
+    background-position-x: 120%;
+    background-position-y: 70%;
+  }
+
+  .woman {
+    background-size: 90%;
+    background-position-x: -90%;
+  }
+  .img-box {
+    width: 1rem;
+    height: 1rem;
+    left: -24%;
+    top: 41%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  body {
+    padding: 20% 10% 10% 10%;
+  }
+  main {
+    flex-direction: column;
+  }
+  .info {
+    height: 70%;
+    width: 100%;
+    padding: 5%;
+  }
+  h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+  }
+  h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    cursor: pointer;
+    font-size: 200%;
+  }
+  h3:hover {
+    color: var(--soft-red);
+  }
+  p {
+    font-size: 150%;
+  }
+  .dividers {
+    margin-bottom: 5%;
+  }
+  .left-img {
+    height: 26%;
+    width: 100%;
+  }
+
+  .woman img {
+    display: flex;
+    width: 170%;
+    height: 170%;
+    top: 17%;
+    left: -36%;
+    position: absolute;
+  }
+  .img-box {
+    display: none;
+  }
+  .bold {
+    font-weight: bold;
+  }
+  .rotate {
+    transform: rotate(180deg);
+  }
+
+  .show {
+    display: flex !important;
+  }
+  .answer.collapse {
+    display: none;
+  }
+
+  .answer.show {
+    display: block;
+  }
+  .bg-pattern {
+    background-image: url("../images/bg-pattern-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 68%;
+    background-position-x: 45%;
+    background-position-y: 90%;
+    position: absolute;
+  }
+  .woman {
+    display: flex;
+    background-image: none;
+    width: 80%;
+    height: 80%;
+    top: -70%;
+    left: 10%;
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
+}
+@media screen and (width: 412px) and (height: 914px) {
+  body {
+    padding: 30% 5% 20% 5%;
+  }
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .info {
+    width: 100%;
+    height: 75%;
+    padding: 3%;
+  }
+  h1 {
+    text-align: center;
+    font-size: 250%;
+    display: flex;
+    justify-content: center;
+    top: -60%;
+  }
+  h3 {
+    font-size: 150%;
+  }
+  p {
+    font-size: 120%;
+  }
+  .left-img {
+    height: 28%;
+    width: 100%;
+  }
+  .bg-pattern {
+    background-size: 76%;
+    background-position-x: 50%;
+    background-position-y: 170%;
+  }
+  .woman {
+    background: none;
+    height: 100%;
+    width: 100%;
+  }
+  .woman img {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    top: -50%;
+    position: relative;
+  }
+  .img-box {
+    display: none;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 410px) {
+  body {
+    padding: 20% 3% 10% 3%;
+  }
+  main {
+    flex-direction: column;
+    padding: 0% 2% 0% 2%;
+  }
+  .info {
+    height: 75%;
+    width: 100%;
+  }
+  h1 {
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2%;
+  }
+  .dividers {
+    margin-bottom: 1%;
+  }
+  .left-img {
+    height: 25%;
+    width: 100%;
+  }
+  .bg-pattern {
+    width: 100%;
+    height: 100%;
+    background-size: 70%;
+    background-position-x: 50%;
+    background-position-y: 98%;
+  }
+  .woman {
+    background-image: none;
+  }
+  .woman img {
+    display: flex;
+    width: 70%;
+    top: -45%;
+    left: 15%;
+    position: absolute;
+  }
+  .img-box {
+    display: none;
+  }
+}
